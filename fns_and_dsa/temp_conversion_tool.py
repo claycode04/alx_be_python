@@ -21,6 +21,6 @@ if __name__ == "__main__":
             converted = convert_to_celsius(temp)
             print(f"{temp}°F is {converted}°C")
         else:
-            print("Invalid unit. Please enter C or F.")
-    except ValueError:
-        print("Invalid temperature. Please enter a numeric value.")
+            raise ValueError("Invalid temperature. Please enter a numeric value.")
+    except ValueError as e:
+        print(e)
